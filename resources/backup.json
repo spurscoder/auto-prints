@@ -1,0 +1,62 @@
+{
+    "中国裁判文书网": {
+        "url": "https://wenshu.court.gov.cn/",
+        "check": true,
+        "func": "wenshu_court_gov_cn"
+    },
+    "中国执行信息公开网": {
+        "url": "http://zxgk.court.gov.cn/",
+        "check": true,
+        "func": "zxgk_court_gov_cn"
+    },
+    "失信被执行人名单信息公布与查询平台": {
+        "url": "http://zxgk.court.gov.cn/shixin/",
+        "check": true,
+        "func": "zxgk_court_gov_cn"
+    },
+    "人民检察院案件信息公开网": {
+        "url": "https://www.12309.gov.cn/",
+        "check": true,
+        "func": "www_12309_gov_cn"
+    },
+    "百度": {
+        "url": "https://www.baidu.com/",
+        "check": true,
+        "func": "www_baidu_com"
+    },
+    "企查查": {
+        "url": "https://www.qcc.com/",
+        "check": true,
+        "func": "www_qcc_com"
+    },
+    "国家企业信用信息公示系统": {
+        "url": "http://www.gsxt.gov.cn/index.html",
+        "check": true,
+        "func": "www_gsxt_gov_cn"
+    },
+    "国家税务总局": {
+        "url": "http://www.chinatax.gov.cn/chinatax/c101249/n2020011502/index.html",
+        "check": true,
+        "func": "www_chinatax_gov_cn"
+    },
+    "信用中国": {
+        "url": "https://www.creditchina.gov.cn/home/index.html",
+        "check": true,
+        "func": "www_creditchina_gov_cn"
+    },
+    "国家产品质量信用信息平台": {
+        "url": "http://zlxy.ancc.org.cn/",
+        "check": true,
+        "func": "zlxy_ancc_org_cn"
+    },
+    "国家外汇管理局": {
+        "url": "http://www.safe.gov.cn/safe/whxzcfxxcx/index.html",
+        "check": true,
+        "func": "www_safe_gov_cn"
+    },
+    "中国海关企业进出口信用信息公示平台": {
+        "url": "http://credit.customs.gov.cn/",
+        "check": true,
+        "func": "credit_customs_gov_cn"
+    }
+}

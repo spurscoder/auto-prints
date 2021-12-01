@@ -1,0 +1,27 @@
+{
+    "券期货市场失信记录查询平台": {
+        "url": "http://neris.csrc.gov.cn/shixinchaxun/",
+        "check": true,
+        "func": "neris_csrc_gov_cn"
+    },
+    "上海证券交易所监管信息": {
+        "url": "http://www.sse.com.cn/",
+        "check": true,
+        "func": "www_sse_com_cn"
+    },
+    "中国仲裁网": {
+        "url": "http://www.china-arbitration.com/",
+        "check": true,
+        "func": "www_china_arbitration_com"
+    },
+    "深圳证券交易所监管信息": {
+        "url": "http://www.szse.cn/index/index.html",
+        "check": true,
+        "func": "www_szse_cn"
+    },
+    "全国中小企业股份转让系统监管": {
+        "url": "http://www.neeq.com.cn/disclosure/supervise.html",
+        "check": true,
+        "func": "www_neeq_com_cn"
+    }
+}
