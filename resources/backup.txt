@@ -1,0 +1,3 @@
+{"国家税务总局": { "url": "http://www.chinatax.gov.cn/", "check": true, "func": "www_chinatax_gov_cn" }}
+
+{"失信被执行人名单信息公布与查询平台": { "url": "http://zxgk.court.gov.cn/shixin/", "check": true, "func": "zxgk_court_gov_cn_shixin" }}

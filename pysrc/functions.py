@@ -12,7 +12,7 @@ def neris_csrc_gov_cn(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
 
     # 按照网站具体操作
     push_pop("f"); time.sleep(SHORT_S)
@@ -33,12 +33,13 @@ def neris_csrc_gov_cn(it, name, check, url, output_dir):
 
     with keyboard.pressed(Key.cmd):
         push_pop("w")
+    return False
 
 
 def www_neeq_com_cn(it, name, check, url, output_dir):
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
 
     push_pop("f"); time.sleep(SHORT_S)
     push_pop("c"); time.sleep(SHORT_S)
@@ -49,13 +50,14 @@ def www_neeq_com_cn(it, name, check, url, output_dir):
     push_pop("c"); time.sleep(3)
 
     do_print(filename)
+    return False
 
 
 def www_sse_com_cn(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
 
     # 按照网站的操作顺序，如下
     push_pop("f"); time.sleep(SHORT_S)
@@ -66,12 +68,13 @@ def www_sse_com_cn(it, name, check, url, output_dir):
 
     # 打印
     do_print(filename)
+    return False
 
 
 def www_szse_cn(it, name, check, url, output_dir):
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
 
     push_pop("f"); time.sleep(SHORT_S)
     push_pop("a"); time.sleep(SHORT_S)
@@ -80,13 +83,14 @@ def www_szse_cn(it, name, check, url, output_dir):
     push_pop(Key.enter); time.sleep(3)
 
     do_print(filename)
+    return False
 
 
 def www_china_arbitration_com(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
 
     # ----
     push_pop("f"); time.sleep(SHORT_S)
@@ -100,24 +104,26 @@ def www_china_arbitration_com(it, name, check, url, output_dir):
 
     # 打印
     do_print(filename)
+    return False
 
 
 def wenshu_court_gov_cn(it, name, check, url, output_dir):
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
+    return False
 
 
 def zxgk_court_gov_cn_shixin(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
 
+    time.sleep(2)
     # 按照网站具体操作
     push_pop("f"); time.sleep(SHORT_S)
-    push_pop("s"); time.sleep(SHORT_S)
-    push_pop("m"); time.sleep(SHORT_S)
+    push_pop("l"); time.sleep(SHORT_S)
     paste(it); time.sleep(SHORT_S)
     push_pop(Key.esc); time.sleep(SHORT_S)
     push_pop("f"); time.sleep(SHORT_S)
@@ -132,13 +138,14 @@ def zxgk_court_gov_cn_shixin(it, name, check, url, output_dir):
 
     # 打印
     do_print(filename)
+    return False
 
 
 def zxgk_court_gov_cn(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
 
     # 按照网站具体操作
     push_pop("f"); time.sleep(SHORT_S)
@@ -156,13 +163,14 @@ def zxgk_court_gov_cn(it, name, check, url, output_dir):
 
     # 打印
     do_print(filename)
+    return False
 
 
 def www_12309_gov_cn(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
 
     push_pop("f"); time.sleep(SHORT_S)
     push_pop("a"); time.sleep(SHORT_S)
@@ -171,83 +179,104 @@ def www_12309_gov_cn(it, name, check, url, output_dir):
     push_pop(Key.enter); time.sleep(3)
 
     do_print(filename)
+    return False
 
 
 def www_baidu_com(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
+    return False
 
 
 def www_qcc_com(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
 
     # 按照网站具体操作
     push_pop("f"); time.sleep(SHORT_S)
-    push_pop("d"); time.sleep(SHORT_S)
-    push_pop("c"); time.sleep(SHORT_S)
+    push_pop("s"); time.sleep(SHORT_S)
+    push_pop("e"); time.sleep(SHORT_S)
     paste(it); time.sleep(SHORT_S)
     push_pop(Key.enter); time.sleep(SHORT_S)
 
     # 因为需要验证码
     input("Press Enter.....")
+    return False
 
 
 def www_gsxt_gov_cn(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
+    return False
 
 
 def www_chinatax_gov_cn(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
 
     push_pop("f"); time.sleep(SHORT_S)
-    push_pop("s"); time.sleep(SHORT_S)
-    push_pop("c"); time.sleep(SHORT_S)
+    push_pop("e"); time.sleep(SHORT_S)
     paste(it); time.sleep(SHORT_S)
     push_pop(Key.enter); time.sleep(3)
 
     do_print(filename)
+    return False
 
 
 def www_creditchina_gov_cn(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
 
     # 按照网站具体操作
     push_pop("f"); time.sleep(SHORT_S)
     push_pop("s"); time.sleep(SHORT_S)
-    push_pop("a"); time.sleep(SHORT_S)
+    push_pop("c"); time.sleep(SHORT_S)
     paste(it); time.sleep(SHORT_S)
     push_pop(Key.enter); time.sleep(SHORT_S)
 
     # 因为需要验证码
     input("Press Enter.....")
+    return False
 
 
 def zlxy_ancc_org_cn(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
+    return False
+
+def www_mee_gov_cn(it, name, check, url, output_dir):
+    # 跳到chrome
+    filename = "{}_{}".format(name, it)
+    if not start_pos(it, name, url, output_dir):
+        return True
+
+    push_pop("f"); time.sleep(SHORT_S)
+    push_pop("a"); time.sleep(SHORT_S)
+    push_pop("d"); time.sleep(SHORT_S)
+    paste(it); time.sleep(SHORT_S)
+    push_pop(Key.enter); time.sleep(3)
+
+    do_print(filename)
+    return False
 
 
 def www_safe_gov_cn(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
 
     push_pop("f"); time.sleep(SHORT_S)
     push_pop("c"); time.sleep(SHORT_S)
@@ -255,12 +284,13 @@ def www_safe_gov_cn(it, name, check, url, output_dir):
     push_pop(Key.enter); time.sleep(3)
 
     do_print(filename)
+    return False
 
 def credit_customs_gov_cn(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
     if not start_pos(it, name, url, output_dir):
-        return
+        return True
 
     # 按照网站具体操作
     push_pop("f"); time.sleep(SHORT_S)
@@ -278,5 +308,6 @@ def credit_customs_gov_cn(it, name, check, url, output_dir):
 
     # 打印
     do_print(filename)
+    return False
 
 

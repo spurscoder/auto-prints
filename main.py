@@ -20,7 +20,9 @@ def print_func(items, urls, output_dir):
             check = url_info["check"]
             for it in items:
                 print("Searching {} @ {}".format(it, name))
-                func(it, name, check, url, output_dir)
+                if func(it, name, check, url, output_dir):
+                    # time.sleep(HALF_S)
+                    continue
                 time.sleep(LONG_S)
 
 
