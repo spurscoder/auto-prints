@@ -259,14 +259,10 @@ def zlxy_ancc_org_cn(it, name, check, url, output_dir):
 def www_mee_gov_cn(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
-    if not start_pos(it, name, url, output_dir):
+    if not start_url_search(it, name, url, output_dir):
         return True
-
-    push_pop("f"); time.sleep(SHORT_S)
-    push_pop("a"); time.sleep(SHORT_S)
-    push_pop("d"); time.sleep(SHORT_S)
-    paste(it); time.sleep(SHORT_S)
-    push_pop(Key.enter); time.sleep(3)
+    
+    time.sleep(2)
 
     do_print(filename)
     return False
@@ -275,13 +271,14 @@ def www_mee_gov_cn(it, name, check, url, output_dir):
 def www_safe_gov_cn(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
-    if not start_pos(it, name, url, output_dir):
+    if not start_url_search(it, name, url, output_dir):
         return True
 
-    push_pop("f"); time.sleep(SHORT_S)
-    push_pop("c"); time.sleep(SHORT_S)
-    paste(it); time.sleep(SHORT_S)
-    push_pop(Key.enter); time.sleep(3)
+    # push_pop("f"); time.sleep(SHORT_S)
+    # push_pop("c"); time.sleep(SHORT_S)
+    # paste(it); time.sleep(SHORT_S)
+    # push_pop(Key.enter); 
+    time.sleep(3)
 
     do_print(filename)
     return False

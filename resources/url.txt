@@ -1,5 +1,5 @@
-{"国家外汇管理局": { "url": "http://www.safe.gov.cn/safe/whxzcfxxcx/index.html", "check": true, "func": "www_safe_gov_cn" }}
-{"生态环境部": { "url": "https://www.mee.gov.cn/", "check": true, "func": "www_mee_gov_cn" }}
+{"国家外汇管理局": { "url": "http://www.safe.gov.cn/safe/search/index.html?siteid=safe&order=releasetime&q=", "check": true, "func": "www_safe_gov_cn" }}
+{"生态环境部": { "url": "https://www.mee.gov.cn/searchnew/?searchword=", "check": true, "func": "www_mee_gov_cn" }}
 {"人民检察院案件信息公开网": { "url": "https://www.12309.gov.cn/", "check": true, "func": "www_12309_gov_cn" }}
 {"上海证券交易所监管信息": { "url": "http://www.sse.com.cn/", "check": true, "func": "www_sse_com_cn" }}
 {"深圳证券交易所监管信息": { "url": "http://www.szse.cn/index/index.html", "check": true, "func": "www_szse_cn" }}

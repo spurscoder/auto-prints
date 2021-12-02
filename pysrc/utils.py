@@ -43,6 +43,25 @@ def start_pos(it, name, url, output_dir):
     time.sleep(SHORT_S)
     return True
 
+def start_url_search(it, name, url, output_dir):
+    filename = "{}_{}".format(name, it)
+    if os.path.exists("{}/{}.pdf".format(output_dir, filename)):
+        print("exists: {}/{}.pdf".format(output_dir, filename))
+        return False
+
+    with keyboard.pressed(Key.alt):
+        push_pop("`")
+        time.sleep(SHORT_S)
+
+    with keyboard.pressed(Key.cmd):
+        push_pop("l")
+        time.sleep(SHORT_S)
+
+    paste(url+it)
+    push_pop(Key.enter)
+    time.sleep(SHORT_S)
+    return True
+
 
 def do_print(filename):
     with keyboard.pressed(Key.cmd):
