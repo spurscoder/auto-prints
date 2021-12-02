@@ -8,23 +8,27 @@ from pysrc.functions import *
 from pysrc.utils import *
 
 
-def print_func(items, url_map, output_dir):
-    for name, url_info in url_map.items():
-        print("=" * 10)
-        print()
-        print("Using {}".format(name))
+def print_func(items, urls, output_dir):
+    for url_map in urls:
+        for name, url_info in url_map.items():
+            print("=" * 10)
+            print()
+            print("Using {}".format(name))
 
-        url = url_info["url"]
-        func = eval(url_info["func"])
-        check = url_info["check"]
-        for it in items:
-            print("Searching {} @ {}".format(it, name))
-            func(it, name, check, url, output_dir)
-            time.sleep(LONG_S)
+            url = url_info["url"]
+            func = eval(url_info["func"])
+            check = url_info["check"]
+            for it in items:
+                print("Searching {} @ {}".format(it, name))
+                func(it, name, check, url, output_dir)
+                time.sleep(LONG_S)
 
 
 def read_url(path):
-    return json.load(open(path))
+    urls = []
+    for line in open(path):
+        urls.append(json.loads(line.strip()))
+    return urls
 
 
 def read_items(path):
