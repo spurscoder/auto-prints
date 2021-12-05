@@ -1,3 +1,4 @@
+{"百度": { "url": "https://www.baidu.com/s?", "check": true, "func": "www_baidu_com" }}
 {"国家外汇管理局": { "url": "http://www.safe.gov.cn/safe/search/index.html?siteid=safe&order=releasetime&q=", "check": true, "func": "www_safe_gov_cn" }}
 {"生态环境部": { "url": "https://www.mee.gov.cn/searchnew/?searchword=", "check": true, "func": "www_mee_gov_cn" }}
 {"中国仲裁网": { "url": "https://www.china-arbitration.com/index/book/index.html?keywords=", "check": true, "func": "www_mee_gov_cn" }}

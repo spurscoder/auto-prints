@@ -185,9 +185,15 @@ def www_12309_gov_cn(it, name, check, url, output_dir):
 
 def www_baidu_com(it, name, check, url, output_dir):
     # 跳到chrome
-    filename = "{}_{}".format(name, it)
-    if not start_pos(it, name, url, output_dir):
-        return True
+    for page in range(5):
+        filename = "{}_{}_{}".format(name, it, page+1)
+        if not start_url_search_baidu(it, name, url, output_dir, page):
+            continue
+
+        time.sleep(3)
+
+        do_print(filename, 3)
+
     return False
 
 
