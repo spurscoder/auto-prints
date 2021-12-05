@@ -1,3 +1,11 @@
 {"国家税务总局": { "url": "http://www.chinatax.gov.cn/", "check": true, "func": "www_chinatax_gov_cn" }}
+http://www.chinatax.gov.cn/s?siteCode=bm29000002&qt=asdfasdf
+
+国家产品质量信用信息平台	http://zlxy.ancc.org.cn/
 
 {"失信被执行人名单信息公布与查询平台": { "url": "http://zxgk.court.gov.cn/shixin/", "check": true, "func": "zxgk_court_gov_cn_shixin" }}
+
+
+{"企查查": { "url": "https://www.qcc.com/", "check": true, "func": "www_qcc_com" }}
+{"信用中国": { "url": "https://www.creditchina.gov.cn/home/index.html", "check": true, "func": "www_creditchina_gov_cn" }}
+

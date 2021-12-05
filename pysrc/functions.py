@@ -89,23 +89,24 @@ def www_szse_cn(it, name, check, url, output_dir):
 def www_china_arbitration_com(it, name, check, url, output_dir):
     # 跳到chrome
     filename = "{}_{}".format(name, it)
-    if not start_pos(it, name, url, output_dir):
+    if not start_url_search(it, name, url, output_dir):
         return True
+    
+    time.sleep(2)
 
-    # ----
-    push_pop("f"); time.sleep(SHORT_S)
-    push_pop("s"); time.sleep(SHORT_S)
-    push_pop("g"); time.sleep(SHORT_S)
-    paste(it); time.sleep(SHORT_S)
-    push_pop(Key.esc); time.sleep(SHORT_S)
-    push_pop("f"); time.sleep(SHORT_S)
-    push_pop("s"); time.sleep(LONG_S)
-    push_pop("g"); time.sleep(3)
-
-    # 打印
     do_print(filename)
     return False
 
+def www_customs_gov_cn(it, name, check, url, output_dir):
+    # 跳到chrome
+    filename = "{}_{}".format(name, it)
+    if not start_url_search(it, name, url, output_dir):
+        return True
+    
+    time.sleep(2)
+
+    do_print(filename)
+    return False
 
 def wenshu_court_gov_cn(it, name, check, url, output_dir):
     filename = "{}_{}".format(name, it)
@@ -263,6 +264,25 @@ def www_mee_gov_cn(it, name, check, url, output_dir):
         return True
     
     time.sleep(2)
+
+    do_print(filename)
+    return False
+
+
+def www_csrc_gov_cn(it, name, check, url, output_dir):
+    # 跳到chrome
+    filename = "{}_{}".format(name, it)
+    if not start_pos(it, name, url, output_dir):
+        return True
+
+    push_pop("f"); time.sleep(SHORT_S)
+    push_pop("f"); time.sleep(SHORT_S)
+    push_pop("a"); time.sleep(SHORT_S)
+    with keyboard.pressed(Key.cmd):
+        push_pop("a")
+        time.sleep(SHORT_S)
+    paste(it); time.sleep(SHORT_S)
+    push_pop(Key.enter); time.sleep(3)
 
     do_print(filename)
     return False
