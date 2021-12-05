@@ -158,5 +158,8 @@ pip-wheel-metadata
 nohup.out
 
 trash
-data
+
 outputs
+
+data
+outputs*
