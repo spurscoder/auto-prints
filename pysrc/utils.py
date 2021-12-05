@@ -63,13 +63,33 @@ def start_url_search(it, name, url, output_dir):
     return True
 
 
-def do_print(filename):
+def start_url_search_baidu(it, name, url, output_dir, page):
+    filename = "{}_{}_{}".format(name, it, page+1)
+    if os.path.exists("{}/{}.pdf".format(output_dir, filename)):
+        print("exists: {}/{}.pdf".format(output_dir, filename))
+        return False
+
+    with keyboard.pressed(Key.alt):
+        push_pop("`")
+        time.sleep(SHORT_S)
+
+    with keyboard.pressed(Key.cmd):
+        push_pop("l")
+        time.sleep(SHORT_S)
+
+    paste(url + "wd={}&oq={}&pn={}".format(it, it, page*50))
+    push_pop(Key.enter)
+    time.sleep(1)
+    return True
+
+
+def do_print(filename, wait=1):
     with keyboard.pressed(Key.cmd):
         push_pop("p")
-        time.sleep(LONG_S)
+        time.sleep(wait+2)
 
         push_pop(Key.enter)
-        time.sleep(SHORT_S)
+        time.sleep(2)
 
         paste(filename)
         time.sleep(HALF_S)
