@@ -14,6 +14,7 @@ HALF_S = 0.5
 
 def push_pop(key):
     keyboard.press(key)
+    time.sleep(0.3)
     keyboard.release(key)
 
 
@@ -63,6 +64,25 @@ def start_url_search(it, name, url, output_dir):
     return True
 
 
+def start_url_search_baidu_new(it, name, url, output_dir, page):
+    filename = "{}_{}_{}".format(name, it, page+1)
+
+    with keyboard.pressed(Key.alt):
+        push_pop("`")
+        time.sleep(SHORT_S)
+
+    with keyboard.pressed(Key.cmd):
+        push_pop("l")
+        time.sleep(SHORT_S)
+
+    paste(url + "wd={}&oq={}&pn={}".format(it, it, page*50))
+    push_pop(Key.enter)
+
+    time.sleep(1)
+
+    return True
+
+
 def start_url_search_baidu(it, name, url, output_dir, page):
     filename = "{}_{}_{}".format(name, it, page+1)
     if os.path.exists("{}/{}.pdf".format(output_dir, filename)):
@@ -86,12 +106,13 @@ def start_url_search_baidu(it, name, url, output_dir, page):
 def do_print(filename, wait=1):
     with keyboard.pressed(Key.cmd):
         push_pop("p")
+        print(1)
         time.sleep(wait+2)
-
         push_pop(Key.enter)
-        time.sleep(2)
+        print(2)
 
+        time.sleep(2)
         paste(filename)
         time.sleep(HALF_S)
-
         push_pop(Key.enter)
+        print(3)

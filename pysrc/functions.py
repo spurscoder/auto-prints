@@ -183,6 +183,77 @@ def www_12309_gov_cn(it, name, check, url, output_dir):
     return False
 
 
+def www_baidu_com_new(it, name, check, url, output_dir):
+    # 跳到chrome
+    pit = it.replace(r"/", "_")
+    print(pit)
+
+    e = []
+    for page in range(5):
+        filename = "{}_{}_{}".format(name, pit, page+1)
+        if os.path.exists("{}/{}.pdf".format(output_dir, filename)):
+            print("exists: {}/{}.pdf".format(output_dir, filename))
+            e.append(True)
+        else:
+            e.append(False)
+
+    if all(e):
+        return True
+    else:
+        for page in range(5):
+            filename = "{}_{}_{}".format(name, pit, page+1)
+            if os.path.exists("{}/{}.pdf".format(output_dir, filename)):
+                os.remove("{}/{}.pdf".format(output_dir, filename))
+
+    with keyboard.pressed(Key.alt):
+        push_pop("`")
+        time.sleep(HALF_S)
+
+    for page in range(5):
+        filename = "{}_{}_{}".format(name, pit, page+1)
+        with keyboard.pressed(Key.cmd):
+            push_pop("t")
+            time.sleep(HALF_S)
+        paste(url + "wd={}&oq={}&pn={}".format(it, it, page*50))
+        push_pop(Key.enter)
+        time.sleep(HALF_S)
+
+    for page in range(4):
+        with keyboard.pressed(Key.ctrl):
+            keyboard.press(Key.shift)
+            keyboard.press(Key.tab)
+            time.sleep(HALF_S)
+            keyboard.release(Key.shift)
+            keyboard.release(Key.tab)
+            time.sleep(HALF_S)
+
+    time.sleep(2)
+    for i in range(5):
+        filename = "{}_{}_{}".format(name, pit, i+1)
+        print(filename)
+
+        with keyboard.pressed(Key.cmd):
+            push_pop("p")
+            print(1)
+            time.sleep(5)
+
+        push_pop(Key.enter)
+        print(2)
+        time.sleep(2.5)
+        paste(filename)
+        time.sleep(2.5)
+        push_pop(Key.enter)
+        print(3)
+        time.sleep(6)
+
+        with keyboard.pressed(Key.cmd):
+            push_pop("w")
+            #  push_pop(Key.tab)
+        time.sleep(3)
+
+    return False
+
+
 def www_baidu_com(it, name, check, url, output_dir):
     # 跳到chrome
     for page in range(5):
